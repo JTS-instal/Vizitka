@@ -1,161 +1,161 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jakub Janda – JTS-instal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jakub Janda – JTS-instal</title>
 
-  <!-- Ikony -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    }
+<style>
+*{
+  box-sizing:border-box;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: radial-gradient(circle at top, #1a1a1a, #000);
-      color: #fff;
-    }
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:radial-gradient(circle at top,#1c1c1c,#000);
+  color:#fff;
+}
 
-    .card {
-      position: relative;
-      width: 100%;
-      max-width: 380px;
-      padding: 32px 24px 28px;
-      border-radius: 28px;
-      background: linear-gradient(180deg, #1a1a1a, #0f0f0f);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.7);
-      overflow: hidden;
-      text-align: center;
-    }
+/* HLAVNÍ KARTA */
+.card{
+  position:relative;
+  width:100%;
+  max-width:380px;
+  padding:110px 22px 30px;
+  border-radius:30px;
+  background:linear-gradient(180deg,#1a1a1a,#0d0d0d);
+  box-shadow:0 35px 70px rgba(0,0,0,.8);
+  text-align:center;
+  overflow:hidden;
+}
 
-    /* Logo jako pozadí */
-    .card::before {
-      content: "JTS";
-      position: absolute;
-      top: 18px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 110px;
-      font-weight: 800;
-      letter-spacing: 8px;
-      color: rgba(180,180,180,0.18);
-      text-shadow:
-        0 0 25px rgba(255, 200, 0, 0.45),
-        0 0 60px rgba(255, 200, 0, 0.25);
-      z-index: 0;
-      pointer-events: none;
-    }
+/* LOGO NA POZADÍ */
+.logo-bg{
+  position:absolute;
+  top:18px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:150px;
+  font-weight:800;
+  letter-spacing:10px;
+  color:rgba(170,170,170,.25);
+  text-shadow:
+    0 0 25px rgba(255,200,0,.45),
+    0 0 60px rgba(255,200,0,.35);
+  pointer-events:none;
+  user-select:none;
+}
 
-    .content {
-      position: relative;
-      z-index: 1;
-    }
+/* JMÉNO */
+h1{
+  margin:0;
+  font-size:26px;
+  font-weight:700;
+}
 
-    h1 {
-      margin: 70px 0 4px;
-      font-size: 26px;
-      font-weight: 700;
-    }
+/* PODTITUL */
+.subtitle{
+  margin-top:6px;
+  margin-bottom:26px;
+  font-size:17px;
+  color:#f5c400;
+}
 
-    .subtitle {
-      color: #f5c400;
-      font-size: 17px;
-      margin-bottom: 22px;
-    }
+/* TLAČÍTKA */
+.btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  width:100%;
+  padding:18px;
+  margin-bottom:14px;
+  border-radius:20px;
+  background:#f5c400;
+  color:#000;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:600;
+  box-shadow:0 8px 26px rgba(245,196,0,.55);
+}
 
-    .btn {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      padding: 16px;
-      margin-bottom: 14px;
-      border-radius: 18px;
-      background: #f5c400;
-      color: #000;
-      font-size: 17px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 6px 20px rgba(245,196,0,0.45);
-      transition: transform .15s ease, box-shadow .15s ease;
-    }
+.material-icons-outlined{
+  font-size:22px;
+}
 
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 26px rgba(245,196,0,0.65);
-    }
+/* SLUŽBY */
+.services{
+  margin-top:20px;
+  font-size:14px;
+  color:#d0d0d0;
+}
 
-    .material-icons-outlined {
-      font-size: 22px;
-    }
+/* IČ / DIČ */
+.company{
+  margin-top:12px;
+  font-size:14px;
+  line-height:1.6;
+}
 
-    .services {
-      margin-top: 18px;
-      font-size: 14px;
-      color: #cfcfcf;
-    }
+.company a{
+  color:#3b6cff;
+  text-decoration:none;
+  font-weight:600;
+}
 
-    .company {
-      margin-top: 10px;
-      font-size: 14px;
-      line-height: 1.6;
-      color: #bdbdbd;
-    }
-
-    .company span {
-      color: #f5c400;
-      font-weight: 600;
-    }
-  </style>
+.company .dic{
+  color:#f5c400;
+  font-weight:600;
+}
+</style>
 </head>
+
 <body>
 
-  <div class="card">
-    <div class="content">
+<div class="card">
 
-      <h1>Jakub Janda</h1>
-      <div class="subtitle">JTS-instal</div>
+  <div class="logo-bg">JTS</div>
 
-      <a class="btn" href="tel:+420XXXXXXXXX">
-        <span class="material-icons-outlined">call</span>
-        Zavolat
-      </a>
+  <h1>Jakub Janda</h1>
+  <div class="subtitle">JTS-instal</div>
 
-      <a class="btn" href="mailto:info@jts-instal.cz">
-        <span class="material-icons-outlined">mail</span>
-        Email
-      </a>
+  <a class="btn" href="tel:+420XXXXXXXXX">
+    <span class="material-icons-outlined">call</span>
+    Zavolat
+  </a>
 
-      <a class="btn" href="https://jts-instal.github.io" target="_blank">
-        <span class="material-icons-outlined">language</span>
-        Web
-      </a>
+  <a class="btn" href="mailto:info@jts-instal.cz">
+    <span class="material-icons-outlined">mail</span>
+    Email
+  </a>
 
-      <a class="btn" href="https://instagram.com/tvuj_instagram" target="_blank">
-        <span class="material-icons-outlined">photo_camera</span>
-        Instagram
-      </a>
+  <a class="btn" href="https://jts-instal.github.io" target="_blank">
+    <span class="material-icons-outlined">language</span>
+    Web
+  </a>
 
-      <div class="services">
-        Elektroinstalace – Automatizace – Jádrové vrtání
-      </div>
+  <a class="btn" href="https://instagram.com/tvuj_instagram" target="_blank">
+    <span class="material-icons-outlined">photo_camera</span>
+    Instagram
+  </a>
 
-      <div class="company">
-        IČ: <span>09467801</span><br>
-        DIČ: <span>CZ0104173707</span>
-      </div>
-
-    </div>
+  <div class="services">
+    Elektroinstalace – Automatizace – Jádrové vrtání
   </div>
+
+  <div class="company">
+    IČ: <a href="https://wwwinfo.mfcr.cz/cgi-bin/ares/darv_bas.cgi?ico=09467801" target="_blank">09467801</a><br>
+    DIČ: <span class="dic">CZ0104173707</span>
+  </div>
+
+</div>
 
 </body>
 </html>

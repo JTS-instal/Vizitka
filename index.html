@@ -2,102 +2,109 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
-  <title>Jakub Janda – JTS-instal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jakub Janda – JTS-instal</title>
 
   <style>
     body {
       margin: 0;
       min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: radial-gradient(circle at top, #111 0%, #000 70%);
       font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: #fff;
     }
 
-    .card {
-      background: #111;
-      border-radius: 24px;
-      padding: 32px 24px 28px;
-      max-width: 380px;
-      width: 90%;
-      text-align: center;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.8);
-      position: relative;
-      overflow: hidden;
+    /* LOGO NA POZADÍ */
+    .watermark {
+      position: fixed;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 150px;
+      font-weight: 900;
+      letter-spacing: 14px;
+      color: rgba(190, 190, 190, 0.12); /* šedý střed */
+      text-shadow:
+        0 0 25px rgba(255, 200, 0, 0.35),
+        0 0 60px rgba(255, 200, 0, 0.18);
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
     }
 
-    /* LOGO JTS */
-    .logo {
-      font-size: 96px;
-      font-weight: 800;
-      letter-spacing: 12px;
-      color: #bdbdbd; /* šedý střed */
-      opacity: 0.85;
-      margin-bottom: 12px;
-      text-shadow:
-        0 0 18px rgba(255, 204, 0, 0.55),
-        0 0 40px rgba(255, 204, 0, 0.35);
+    /* KARTA */
+    .card {
+      position: relative;
+      z-index: 2;
+      background: rgba(25, 25, 25, 0.9);
+      border-radius: 22px;
+      padding: 32px 26px;
+      max-width: 360px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.7);
     }
 
     h1 {
-      margin: 6px 0 4px;
+      margin: 0;
       font-size: 26px;
     }
 
     h2 {
-      margin: 0 0 22px;
+      margin: 6px 0 24px;
       font-size: 18px;
+      color: #f5c400;
       font-weight: normal;
-      color: #f1c40f;
     }
 
     .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      background: #f1c40f;
+      display: block;
+      width: 100%;
+      padding: 16px;
+      margin: 12px 0;
+      background: #f5c400;
       color: #000;
       text-decoration: none;
-      padding: 16px;
-      border-radius: 16px;
       font-size: 18px;
       font-weight: bold;
-      margin-bottom: 14px;
-      transition: transform 0.1s ease, box-shadow 0.1s ease;
-      box-shadow: 0 6px 0 #caa400;
+      border-radius: 14px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
-    .btn:active {
-      transform: translateY(2px);
-      box-shadow: 0 4px 0 #caa400;
+    .btn:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(245, 196, 0, 0.45);
     }
 
-    .footer {
+    .services {
       margin-top: 18px;
       font-size: 14px;
-      color: #aaa;
+      color: #bbb;
     }
   </style>
 </head>
 
 <body>
-  <div class="card">
-    <div class="logo">JTS</div>
 
+  <!-- LOGO NA POZADÍ -->
+  <div class="watermark">JTS</div>
+
+  <!-- VIZITKA -->
+  <div class="card">
     <h1>Jakub Janda</h1>
     <h2>JTS-instal</h2>
 
     <a class="btn" href="tel:+420727827399">📞 Zavolat</a>
     <a class="btn" href="mailto:jandajakub@jtsinstal.cz">✉️ Email</a>
-    <a class="btn" href="https://jts-instal.cz">🌐 Web</a>
+    <a class="btn" href="https://jts-instal.cz" target="_blank">🌐 Web</a>
 
-    <div class="footer">
+    <div class="services">
       Elektroinstalace – Automatizace – Jádrové vrtání
     </div>
   </div>
+
 </body>
 </html>

@@ -1,68 +1,102 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <title>Jakub Janda – JTS-instal</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-        .card {
-            background: #111827;
-            border-radius: 16px;
-            padding: 24px;
-            max-width: 360px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-        }
-        h1 {
-            margin: 0;
-            font-size: 22px;
-        }
-        h2 {
-            margin: 6px 0 16px;
-            font-weight: normal;
-            font-size: 16px;
-            color: #94a3b8;
-        }
-        a.button {
-            display: block;
-            background: #22c55e;
-            color: #000;
-            padding: 12px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-        .small {
-            margin-top: 16px;
-            font-size: 14px;
-            color: #cbd5f5;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JTS-instal | Jakub Janda</title>
+
+<style>
+body{
+    margin:0;
+    min-height:100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: linear-gradient(135deg,#0b0b0b,#1a1a1a);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    background: rgba(25,25,25,0.95);
+    border-radius:24px;
+    padding:32px 26px;
+    width:100%;
+    max-width:380px;
+    text-align:center;
+    box-shadow:0 20px 50px rgba(0,0,0,.6);
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:"JTS";
+    position:absolute;
+    inset:0;
+    font-size:120px;
+    font-weight:900;
+    color:rgba(255,200,0,0.05);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    letter-spacing:12px;
+    pointer-events:none;
+}
+
+h1{
+    margin:0;
+    font-size:26px;
+    position:relative;
+}
+
+h2{
+    margin:6px 0 18px;
+    font-size:15px;
+    font-weight:500;
+    color:#ffc800;
+    letter-spacing:1px;
+    position:relative;
+}
+
+a.button{
+    display:block;
+    margin:12px 0;
+    padding:14px;
+    background:#ffc800;
+    color:#000;
+    text-decoration:none;
+    font-weight:600;
+    border-radius:14px;
+    transition:transform .15s, box-shadow .15s;
+    position:relative;
+}
+
+a.button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(255,200,0,.35);
+}
+
+.footer{
+    margin-top:18px;
+    font-size:12px;
+    color:#aaa;
+    position:relative;
+}
+</style>
 </head>
+
 <body>
-    <div class="card">
-        <h1>Jakub Janda</h1>
-        <h2>JTS-instal</h2>
+<div class="card">
+    <h1>Jakub Janda</h1>
+    <h2>JTS-instal</h2>
 
-        <a class="button" href="tel:+420727827399">📞 Zavolat</a>
-        <a class="button" href="mailto:jandajakub@jtsinstal.cz">✉️ Napsat e-mail</a>
-        <a class="button" href="https://jts-instal.cz" target="_blank">🌐 Web</a>
+    <a class="button" href="tel:+420XXXXXXXXX">📞 Zavolat</a>
+    <a class="button" href="mailto:info@jts-instal.cz">✉️ Email</a>
+    <a class="button" href="https://www.jts-instal.cz">🌐 Web</a>
 
-        <div class="small">
-            📍 Elektroinstalace · revize · montáže
-        </div>
+    <div class="footer">
+        Elektroinstalace • Servis • Revize
     </div>
+</div>
 </body>
 </html>

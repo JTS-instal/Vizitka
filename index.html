@@ -5,72 +5,70 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jakub Janda – JTS-instal</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 body {
-  margin: 0;
   min-height: 100vh;
-  font-family: 'Inter', sans-serif;
-  background: radial-gradient(circle at top, #1b1b1b 0%, #000 70%);
+  background: radial-gradient(circle at top, #1b1b1b, #000);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   color: #fff;
 }
 
-/* KARTA */
 .card {
   position: relative;
-  width: 100%;
-  max-width: 380px;
-  background: rgba(20,20,20,0.92);
-  border-radius: 28px;
-  padding: 140px 24px 32px;
+  width: 360px;
+  padding: 40px 24px 28px;
+  background: rgba(20,20,20,0.9);
+  border-radius: 22px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.9);
   text-align: center;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.8);
   overflow: hidden;
 }
 
-/* LOGO NA POZADÍ */
+/* POZADÍ LOGO JTS */
 .card::before {
   content: "JTS";
   position: absolute;
-  top: 38px;
+  top: 12%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 140px;
-  font-weight: 700;
-  color: rgba(255, 204, 0, 0.22);
-  text-shadow:
-    0 0 30px rgba(255,204,0,0.6),
-    0 0 60px rgba(255,204,0,0.35);
-  filter: blur(1px);
-  pointer-events: none;
-  white-space: nowrap;
+  font-size: 150px;
+  font-weight: 800;
+  color: rgba(255, 204, 0, 0.25);
+  filter: blur(2px);
+  z-index: 0;
 }
 
-/* TEXTY */
-.name {
+/* OBSAH NAD POZADÍM */
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
   font-size: 26px;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
-.brand {
+.subtitle {
   font-size: 16px;
-  color: #ffcc00;
+  color: #f2c200;
   margin-bottom: 28px;
 }
 
 /* TLAČÍTKA */
-.btn {
+.button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,39 +76,33 @@ body {
   width: 100%;
   padding: 16px;
   margin-bottom: 14px;
-  background: #ffcc00;
+  border-radius: 14px;
+  background: #f2c200;
   color: #000;
   text-decoration: none;
   font-size: 18px;
   font-weight: 600;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(255,204,0,0.35);
-  transition: transform 0.15s ease;
+  box-shadow: 0 10px 30px rgba(242,194,0,0.45);
 }
 
-.btn:hover {
-  transform: scale(0.98);
+.button i {
+  font-size: 20px;
 }
 
-.btn i {
-  font-size: 18px;
-}
-
-/* SPODNÍ TEXT */
-.services {
-  margin-top: 18px;
+/* POPIS */
+.desc {
+  margin: 18px 0 14px;
   font-size: 14px;
-  opacity: 0.8;
+  color: #ccc;
 }
 
-/* IČ / DIČ – VEDLE SEBE, BEZ BARVY */
-.company {
-  margin-top: 10px;
-  font-size: 14px;
-  color: rgba(255,255,255,0.75);
+/* IČ / DIČ */
+.ids {
   display: flex;
   justify-content: center;
-  gap: 18px;
+  gap: 16px;
+  font-size: 14px;
+  color: #aaa;
 }
 </style>
 </head>
@@ -118,32 +110,36 @@ body {
 <body>
 
 <div class="card">
-  <div class="name">Jakub Janda</div>
-  <div class="brand">JTS-instal</div>
+  <div class="content">
 
-  <a class="btn" href="tel:+420XXXXXXXXX">
-    <i class="fa-solid fa-phone"></i> Zavolat
-  </a>
+    <h1>Jakub Janda</h1>
+    <div class="subtitle">JTS-instal</div>
 
-  <a class="btn" href="mailto:info@jts-instal.cz">
-    <i class="fa-solid fa-envelope"></i> Email
-  </a>
+    <a class="button" href="tel:+420XXXXXXXXX">
+      <i class="fa-solid fa-phone"></i> Zavolat
+    </a>
 
-  <a class="btn" href="https://jts-instal.github.io">
-    <i class="fa-solid fa-globe"></i> Web
-  </a>
+    <a class="button" href="mailto:info@jts-instal.cz">
+      <i class="fa-solid fa-envelope"></i> Email
+    </a>
 
-  <a class="btn" href="https://instagram.com/jtsinstal">
-    <i class="fa-brands fa-instagram"></i> Instagram
-  </a>
+    <a class="button" href="https://jts-instal.github.io">
+      <i class="fa-solid fa-globe"></i> Web
+    </a>
 
-  <div class="services">
-    Elektroinstalace – Automatizace – Jádrové vrtání
-  </div>
+    <a class="button" href="https://instagram.com/TVUJ_INSTAGRAM">
+      <i class="fa-brands fa-instagram"></i> Instagram
+    </a>
 
-  <div class="company">
-    <span>IČ: 09467801</span>
-    <span>DIČ: CZ0104173707</span>
+    <div class="desc">
+      Elektroinstalace – Automatizace – Jádrové vrtání
+    </div>
+
+    <div class="ids">
+      <div>IČ: 09467801</div>
+      <div>DIČ: CZ0104173707</div>
+    </div>
+
   </div>
 </div>
 

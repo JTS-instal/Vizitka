@@ -22,13 +22,13 @@ body {
 body::before {
     content: "JTS";
     position: fixed;
-    top: 18%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    font-size: 36vw;
+    transform: translate(-50%, -50%);
+    font-size: 40vw;
     font-weight: 900;
-    letter-spacing: 2vw;
-    color: rgba(241,196,15,0.16);
+    letter-spacing: 3vw;
+    color: rgba(241,196,15,0.08);
     z-index: 0;
     user-select: none;
 }
@@ -36,7 +36,7 @@ body::before {
 .card {
     background: rgba(18,18,18,0.96);
     border-radius: 22px;
-    padding: 26px;
+    padding: 28px;
     width: 90%;
     max-width: 380px;
     text-align: center;
@@ -44,17 +44,17 @@ body::before {
     z-index: 1;
 }
 
-/* LOGO NAHOŘE – NAHRAZUJE ŠEDÝ ČTVERCEC */
+/* LOGO JTS – VĚTŠÍ, NA STŘED, MÉNĚ VIDITELNÉ */
 .logo {
-    font-size: 72px;
+    font-size: 110px;          /* 1,5× větší */
     font-weight: 900;
-    letter-spacing: 8px;
-    color: #f1c40f;
-    margin-bottom: 14px;
+    letter-spacing: 12px;
+    color: rgba(241,196,15,0.45);
+    margin-bottom: 12px;
+    text-align: center;
     text-shadow:
-        0 0 10px rgba(241,196,15,0.6),
-        0 0 25px rgba(241,196,15,0.35),
-        0 0 45px rgba(241,196,15,0.2);
+        0 0 18px rgba(241,196,15,0.35),
+        0 0 40px rgba(241,196,15,0.18);
 }
 
 h1 {
@@ -93,7 +93,7 @@ h2 {
 
 <div class="card">
 
-    <!-- LOGO JTS -->
+    <!-- LOGO -->
     <div class="logo">JTS</div>
 
     <h1>Jakub Janda</h1>

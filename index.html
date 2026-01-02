@@ -24,7 +24,7 @@
     /* LOGO NA POZADÍ */
     .watermark {
       position: absolute;
-      top: 45%;
+      top: 44%;
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 150px;
@@ -32,8 +32,8 @@
       letter-spacing: 16px;
       color: rgba(200, 200, 200, 0.22);
       text-shadow:
-        0 0 35px rgba(255, 200, 0, 0.45),
-        0 0 80px rgba(255, 200, 0, 0.25);
+        0 0 30px rgba(255, 200, 0, 0.45),
+        0 0 70px rgba(255, 200, 0, 0.25);
       pointer-events: none;
       user-select: none;
       z-index: 0;
@@ -66,9 +66,10 @@
     .btn {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 12px;
       width: 100%;
-      padding: 16px 18px;
+      padding: 16px;
       margin: 12px 0;
       background: #f5c400;
       color: #000;
@@ -108,7 +109,7 @@
     <h1>Jakub Janda</h1>
     <h2>JTS-instal</h2>
 
-    <!-- TELEFON -->
+    <!-- ZAVOLAT -->
     <a class="btn" href="tel:+420727827399">
       <svg viewBox="0 0 24 24">
         <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3 5.2 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.7l.5 2.6a2 2 0 0 1-.5 1.7l-1.1 1.1a16 16 0 0 0 6.1 6.1l1.1-1.1a2 2 0 0 1 1.7-.5l2.6.5A2 2 0 0 1 22 16.9z"/>
@@ -119,7 +120,7 @@
     <!-- EMAIL -->
     <a class="btn" href="mailto:jandajakub@jtsinstal.cz">
       <svg viewBox="0 0 24 24">
-        <path d="M4 4h16v16H4z"/>
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
         <path d="M22 6l-10 7L2 6"/>
       </svg>
       Email
